@@ -4,11 +4,13 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+app.use('/assets', express.static('assets'));
+
 app.get('/', (req, res) => {
-    res.send('Home Page')
+    res.render('index')
 });
 app.get('/about', (req, res) => {
-    res.send('About Page')
+    res.render('about')
 });
 app.get('/profile/:name', (req, res) => {
     const data = {
