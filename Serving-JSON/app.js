@@ -4,6 +4,8 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
 	res.writeHead(200, { 'Content-Type': 'application/json' });
 
+    console.log(req.url)
+    
 	const person = {
 		name: 'alex',
 		email: 'alex@yahoo.com',
