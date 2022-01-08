@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 app.get('/about', (req, res) => {
-    res.render('about')
+    res.render('about', { qs: req.query });
 });
 app.get('/profile/:name', (req, res) => {
     const data = {
@@ -23,4 +23,4 @@ app.get('/profile/:name', (req, res) => {
     res.render('profile', { person: req.params.name, data });
 })
 
-app.listen(3000)
+app.listen(3000) 
