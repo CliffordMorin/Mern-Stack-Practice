@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/styles.css">
+    <title>About page</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %> 
+    <h1>Yoooooo this is the about page!!!!!!</h1>
+    <form action="/about" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="">
+
+        <label for="job">Job</label>
+        <input type="text" name="job" id="job" value="">
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" value="">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
